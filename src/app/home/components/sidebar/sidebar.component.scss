@@ -1,0 +1,35 @@
+@import "src/app/app.component.scss";
+.sidebar-header {
+  height: 180px;
+  background: mat-color($primary);
+  position: relative;
+
+  &__photo img {
+    width: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    .name {
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+
+  &__logout-button {
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    .icon {
+      color: white;
+    }
+  }
+}

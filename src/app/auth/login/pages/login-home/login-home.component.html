@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="login-card">
+    <mat-card>
+      <div class="login-card__header">
+        <div class="login-card__header-icon">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="login-card__header-title">
+          <h3>Hey, welcome back!!!</h3>
+        </div>
+      </div>
+      <div class="login-card__body">
+        <div class="login-card__body-button login-card__body-button--linkedin">
+          <button mat-raised-button (click)="loginWithLinkedin()">
+            Continue with LinkedIn
+          </button>
+        </div>
+        <div class="login-card__body-button login-card__body-button--google">
+          <button mat-raised-button (click)="loginWithGoogle()">
+            Continue with Google
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
