@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "croomsfire": {
+      "hosting": {
+        "frontend": [
+          "croomsfire"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "staging": "croomsfire"
+  }
+}

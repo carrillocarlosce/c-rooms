@@ -6,7 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'rooms',
     pathMatch: 'prefix'
   },
   {
@@ -14,11 +14,8 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    canActivate: [
-      AuthGuard
-    ]
+    path: 'rooms',
+    loadChildren: () => import('./rooms/rooms.module').then(m => m.RoomsModule),
   }
 ];
 

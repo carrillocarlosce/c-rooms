@@ -1,0 +1,43 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav
+    #drawer
+    fixedInViewPort="true"
+    class="app-side"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async).matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches"
+  >
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button
+          mat-icon-button
+          color="white"
+          (click)="!drawer.opened ? drawer.open() : drawer.close()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{ title }}</span>
+        <span class="h-spacer"></span>
+        <a
+          *ngIf="showCreateRoom"
+          [routerLink]="['host']"
+          mat-icon-button
+          color="white"
+          aria-label="Example icon button with a menu icon"
+        >
+          <mat-icon>video_call</mat-icon>
+        </a>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet (activate)="routeChange($event)"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <mat-drawer-container >
+    <mat-drawer mode="side" opened class="app-side" appResponsiveSidenav #start>
+    </mat-drawer>
+    <mat-drawer-content> </mat-drawer-content>
+  </mat-drawer-container> -->

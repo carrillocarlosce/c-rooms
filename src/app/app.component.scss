@@ -15,3 +15,9 @@ $theme: mat-light-theme($primary, $accent);
 @include mat-core-theme($theme);
 @include mat-button-theme($theme);
 @include mat-checkbox-theme($theme);
+
+::ng-deep {
+  .h-spacer {
+    width: 100%;
+  }
+}

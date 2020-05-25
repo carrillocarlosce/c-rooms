@@ -1,0 +1,7 @@
+.home-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 64px);
+}

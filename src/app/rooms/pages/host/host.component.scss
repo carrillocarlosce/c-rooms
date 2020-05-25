@@ -1,0 +1,56 @@
+.host-container {
+  padding: 16px;
+}
+
+.grid {
+  display: flex;
+  @media (max-width: 600px) {
+    flex-flow: column-reverse;
+  }
+}
+.room-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-box {
+    max-width: 300px;
+    min-width: 300px;
+  }
+  margin: 16px;
+  margin-left: 0;
+  flex-grow: 1;
+  &-input {
+    mat-form-field {
+      width: 100%;
+    }
+    ::ng-deep {
+      font-size: 32px;
+      input,
+      label {
+        text-align: center;
+      }
+    }
+  }
+  &-button {
+    button {
+      width: 100%;
+      height: 40px;
+    }
+  }
+  // width: ;
+}
+.video-preview {
+  margin: 16px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-box {
+    max-width: 300px;
+    min-width: 300px;
+  }
+  video {
+    margin-top: 16px;
+    width: 100%;
+  }
+}

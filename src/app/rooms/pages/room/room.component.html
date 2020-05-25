@@ -1,0 +1,31 @@
+<div class="room-container">
+  <mat-grid-list
+    [cols]="(isHandset | async).matches ? 1 : 2"
+    [rowHeight]="(isHandset | async).matches ? '44vh' : '88vh'"
+  >
+    <mat-grid-tile>
+      <video #myVideo class="room-media-card__video"></video>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <video #remoteVideo class="room-media-card__video"></video>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <!-- <mat-card class="room-media-card" *ngIf="myVideoStream">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+
+    mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz
+        breeds of dog from Japan. A small, agile dog that copes very well with
+        mountainous terrain, the Shiba Inu was originally bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
+</div>

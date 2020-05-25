@@ -35,7 +35,7 @@ export class UserProfile implements IUserProfile {
         Object.assign(this, properties);
     }
 
-    static fromLinkedin(data: IUserProfileAuth0) {
+    static fromAuth0(data: IUserProfileAuth0) {
         return new UserProfile({
             email: data.email,
             emailVerified: data.email_verified,

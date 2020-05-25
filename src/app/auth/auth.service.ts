@@ -21,7 +21,6 @@ export class AuthService {
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
     catchError(err => throwError(err)),
-    tap(console.log)
   );
   // Define observables for SDK methods that return promises by default
   // For each Auth0 SDK method, first ensure the client instance is ready
@@ -50,12 +49,16 @@ export class AuthService {
 
   // When calling, options can be passed if desired
   // https://auth0.github.io/auth0-spa-js/classes/auth0client.html#getuser
-  getUser$(options?): Observable<any> {
+  getUser$(options?): Observable<UserProfile> {
     return this.auth0Client$.pipe(
       concatMap((client: Auth0Client) => from(client.getUser(options))),
-      map(user => UserProfile.fromLinkedin(user)),
+      map(user => {
+        if (user) {
+          return UserProfile.fromAuth0(user);
+        }
+        return null;
+      }),
       tap(user => this.userProfileSubject$.next(user)),
-      tap(console.log),
     );
   }
 

@@ -1,8 +1,11 @@
 .container {
-  padding: 10vh;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  margin: 16px;
 }
 .login-card {
-  width: 500px;
+  max-width: 500px;
   margin: auto;
 
   &__header {

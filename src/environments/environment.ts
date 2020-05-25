@@ -8,10 +8,14 @@ export const environment = {
     client_id: 'ZlgEQkF4Di8UOZWaVxkiY83y01zDTmcl',
     domain: 'carrillocarlosce.auth0.com'
   },
-  linkedin: {
-    authorizationUrl: 'https://www.linkedin.com/oauth/v2/authorization',
-    clientId: '78spmszhjpvoxa',
-    clientSecret: 'fD9eE83FiTvaHNKE',
+  firebase: {
+    apiKey: 'AIzaSyAu5LvkZSj9ZgsfEUt-j6O2F9NNZczpcyQ',
+    authDomain: 'croomsfire.firebaseapp.com',
+    databaseURL: 'https://croomsfire.firebaseio.com',
+    projectId: 'croomsfire',
+    storageBucket: 'croomsfire.appspot.com',
+    messagingSenderId: '211284280324',
+    appId: '1:211284280324:web:9d5aa602c81b13401b2151',
   }
 };
 

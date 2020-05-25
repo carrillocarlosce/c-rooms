@@ -1,0 +1,47 @@
+<div class="host-container">
+  <h2>Introduce a name for the Room</h2>
+  <mat-divider></mat-divider>
+
+  <div class="grid">
+    <div class="room-form">
+      <div class="room-form-box">
+        <div class="room-form-input">
+          <mat-form-field appearance="legacy">
+            <mat-label>Room Name</mat-label>
+            <input
+              matInput
+              placeholder=""
+              #name
+              (keyup.enter)="createRoom(name.value)"
+            />
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </div>
+        <div class="room-form-button">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="createRoom(name.value)"
+          >
+            CREATE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="video-preview-box">
+        <mat-card class="video-preview-card">
+          <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image"></div> -->
+            <mat-card-title>Video Preview</mat-card-title>
+            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+          </mat-card-header>
+          <mat-divider></mat-divider>
+
+          <video #videoPreview muted="" autoplay="" playsinline=""></video>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
